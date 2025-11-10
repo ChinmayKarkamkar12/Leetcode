@@ -1,9 +1,8 @@
-from typing import List
 class Solution:
-    def containsDuplicate(self, nums: list[int]) -> bool:
-        hashset = set()
-        for n in nums:
-            if n in hashset:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        seen = set()
+        for num in nums:
+            if num in seen:
                 return True
-            hashset.add(n)
+            seen.add(num)
         return False
